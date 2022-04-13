@@ -33,6 +33,11 @@ class LoginPageAutomationPractice(BasePage):
         'LOCATOR': "SubmitLogin"
     })
 
+    __MY_ACCOUNT = locator_by({
+        'BY': By.XPATH,
+        'LOCATOR': "//h1[contains(text(),'My account')]"
+    })
+
     def __init__(self):
         super().__init__()
 
@@ -67,3 +72,14 @@ class LoginPageAutomationPractice(BasePage):
         self.fill_input_password(password)
         self.click_on_login_btn()
         return HomePageAutomation()
+
+    def get_page_title(self):
+        return self.driver.title
+
+
+
+
+
+
+
+

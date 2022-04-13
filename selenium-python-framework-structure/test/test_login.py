@@ -17,3 +17,20 @@ class TestLogin:
         home_page = login_page.login(self._data.usuario, self._data.contrasena)
         assert home_page.is_displayed()
         time.sleep(5)
+
+    def test_verify_login_was_sucessfull(self, open_login_page_AUTO):
+        login_page = open_login_page_AUTO
+        assert login_page.is_displayed()
+        home_page = login_page.login(self._data.usuario, self._data.contrasena)
+        assert("My account - My Store" in login_page.get_page_title())
+
+
+
+
+
+
+
+
+
+
+
