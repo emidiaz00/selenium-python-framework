@@ -1,0 +1,2 @@
+def commons():
+    return None
