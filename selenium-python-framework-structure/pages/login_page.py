@@ -38,6 +38,11 @@ class LoginPageAutomationPractice(BasePage):
         'LOCATOR': "//h1[contains(text(),'My account')]"
     })
 
+    __MY_ACCOUNT_MSG = locator_by({
+        'BY': By.XPATH,
+        'LOCATOR': "//p[contains(text(),'Welcome to your account. Here you can manage all o')]"
+    })
+
     def __init__(self):
         super().__init__()
 
@@ -75,6 +80,13 @@ class LoginPageAutomationPractice(BasePage):
 
     def get_page_title(self):
         return self.driver.title
+
+    def result_account_was_created(self):
+        return self.get_text_element(self.__MY_ACCOUNT_MSG)
+
+
+
+
 
 
 
