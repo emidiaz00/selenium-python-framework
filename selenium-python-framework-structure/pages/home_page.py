@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 from utils.web_driver_actions import locator_by
 
-class HomePageAutomation(BasePage):
 
+class HomePageAutomation(BasePage):
     __DIV_CONTAINER = locator_by({
         'BY': By.XPATH,
         'LOCATOR': "//header/div[1]/div[1]"
