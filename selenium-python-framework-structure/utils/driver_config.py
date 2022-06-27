@@ -27,7 +27,7 @@ def config_implicit_timeout():
     try:
         return int(read_config_file("driver", 'implicit_timeout'))
     except:
-        return DEFAULT_WAIT_TIME
+        return wDEFAULT_WAIT_TIME
 
 
 def config_explicit_timeout():
